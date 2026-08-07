@@ -33,7 +33,7 @@ const Cart = () => {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       <main className="flex-1 container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8">Shopping Cart</h1>
+        <h1 className="text-2xl sm:text-4xl font-bold mb-6 sm:mb-8">Shopping Cart</h1>
         
         {cart.length === 0 ? (
           <Card>
@@ -43,15 +43,15 @@ const Cart = () => {
             </CardContent>
           </Card>
         ) : (
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-3 gap-6 sm:gap-8">
             <div className="lg:col-span-2 space-y-4">
               {cartWithProducts.map(item => (
                 <Card key={item.id}>
-                  <CardContent className="p-6 flex gap-6">
+                  <CardContent className="p-4 sm:p-6 flex flex-col xs:flex-row gap-4 sm:gap-6">
                     <img
                       src={item.product?.images[0]}
                       alt={item.product?.title}
-                      className="w-32 h-32 object-cover rounded"
+                      className="w-full xs:w-32 h-40 xs:h-32 object-cover rounded"
                     />
                     <div className="flex-1">
                       <h3 className="font-semibold text-lg mb-2">{item.product?.title}</h3>
@@ -61,7 +61,7 @@ const Cart = () => {
                           Note: {item.customization_notes}
                         </p>
                       )}
-                      <div className="flex items-center gap-4">
+                      <div className="flex flex-wrap items-center gap-4">
                         <div className="flex items-center gap-2">
                           <Button
                             size="icon"

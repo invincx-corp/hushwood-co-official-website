@@ -149,9 +149,9 @@ const Checkout = () => {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       <main className="flex-1 container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8">Checkout</h1>
+        <h1 className="text-2xl sm:text-4xl font-bold mb-6 sm:mb-8">Checkout</h1>
         
-        <form onSubmit={handleSubmit} className="grid lg:grid-cols-3 gap-8">
+        <form onSubmit={handleSubmit} className="grid lg:grid-cols-3 gap-6 sm:gap-8">
           <div className="lg:col-span-2">
             <Card>
               <CardHeader>
@@ -186,7 +186,7 @@ const Checkout = () => {
                     onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                   />
                 </div>
-                <div className="grid md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div>
                     <Label htmlFor="city">City *</Label>
                     <Input

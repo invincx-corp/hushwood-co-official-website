@@ -142,30 +142,30 @@ const FAQ = () => {
       <Navigation />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="gradient-elegant py-16">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-4">
+        <section className="gradient-elegant py-10 sm:py-16">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4">
               Frequently Asked Questions
             </h1>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base sm:text-lg text-muted-foreground">
               Find answers to common questions about our services, ordering process, and more
             </p>
           </div>
         </section>
 
         {/* FAQ Content */}
-        <section className="py-16 bg-background">
-          <div className="max-w-4xl mx-auto px-6">
-            <div className="space-y-12">
+        <section className="py-10 sm:py-16 bg-background">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            <div className="space-y-8 sm:space-y-12">
               {faqCategories.map((category, idx) => (
                 <div key={idx}>
-                  <h2 className="text-2xl font-bold text-primary mb-6">{category.category}</h2>
+                  <h2 className="text-xl sm:text-2xl font-bold text-primary mb-4 sm:mb-6">{category.category}</h2>
                   <Accordion type="single" collapsible className="space-y-4">
                     {category.questions.map((item, qIdx) => (
                       <AccordionItem 
                         key={qIdx} 
                         value={`item-${idx}-${qIdx}`}
-                        className="border rounded-lg px-6 bg-card"
+                        className="border rounded-lg px-4 sm:px-6 bg-card"
                       >
                         <AccordionTrigger className="text-left hover:no-underline py-4">
                           <span className="font-semibold text-primary">{item.question}</span>
@@ -183,13 +183,13 @@ const FAQ = () => {
         </section>
 
         {/* Still Have Questions */}
-        <section className="py-16 bg-gradient-subtle">
-          <div className="max-w-4xl mx-auto px-6">
+        <section className="py-10 sm:py-16 bg-gradient-subtle">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <Card className="overflow-hidden">
-              <CardContent className="p-8 md:p-12">
-                <div className="text-center space-y-6">
-                  <h2 className="text-3xl font-bold text-primary">Still Have Questions?</h2>
-                  <p className="text-muted-foreground text-lg">
+              <CardContent className="p-5 sm:p-8 md:p-12">
+                <div className="text-center space-y-4 sm:space-y-6">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-primary">Still Have Questions?</h2>
+                  <p className="text-muted-foreground text-base sm:text-lg">
                     Can't find the answer you're looking for? Our team is here to help!
                   </p>
                   
@@ -219,7 +219,7 @@ const FAQ = () => {
                     </div>
                   </div>
 
-                  <div className="flex gap-4 justify-center mt-8">
+                  <div className="flex flex-col xs:flex-row gap-3 sm:gap-4 justify-center mt-6 sm:mt-8">
                     <Link to="/contact">
                       <Button size="lg" className="shadow-gold">
                         Contact Us

@@ -35,7 +35,7 @@ const Auth = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
-      <main className="flex-1 container mx-auto px-4 py-16 flex items-center justify-center">
+      <main className="flex-1 container mx-auto px-4 py-10 sm:py-16 flex items-center justify-center">
         <Card className="w-full max-w-md">
           <CardHeader>
             <CardTitle>Welcome to Hushwood & Co</CardTitle>

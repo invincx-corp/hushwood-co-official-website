@@ -135,22 +135,22 @@ const Admin = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
-      <main className="flex-1 container mx-auto px-4 py-24">
-        <h1 className="text-4xl font-bold mb-8 text-primary">Admin Dashboard</h1>
+      <main className="flex-1 container mx-auto px-4 py-16 sm:py-24">
+        <h1 className="text-2xl sm:text-4xl font-bold mb-8 text-primary">Admin Dashboard</h1>
 
         <Tabs defaultValue="orders" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-3">
-            <TabsTrigger value="orders" className="flex items-center gap-2">
+          <TabsList className="grid w-full grid-cols-3 h-auto">
+            <TabsTrigger value="orders" className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-xs sm:text-sm px-1 py-2">
               <Package className="w-4 h-4" />
-              Orders ({orders.length})
+              <span>Orders ({orders.length})</span>
             </TabsTrigger>
-            <TabsTrigger value="contacts" className="flex items-center gap-2">
+            <TabsTrigger value="contacts" className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-xs sm:text-sm px-1 py-2">
               <MessageSquare className="w-4 h-4" />
-              Contacts ({contacts.length})
+              <span>Contacts ({contacts.length})</span>
             </TabsTrigger>
-            <TabsTrigger value="quotes" className="flex items-center gap-2">
+            <TabsTrigger value="quotes" className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-xs sm:text-sm px-1 py-2">
               <FileText className="w-4 h-4" />
-              Quotes ({quotes.length})
+              <span>Quotes ({quotes.length})</span>
             </TabsTrigger>
           </TabsList>
 
@@ -158,7 +158,7 @@ const Admin = () => {
             {orders.map((order) => (
               <Card key={order.id}>
                 <CardHeader>
-                  <div className="flex justify-between items-start">
+                  <div className="flex flex-col xs:flex-row justify-between items-start gap-2">
                     <div>
                       <CardTitle className="text-xl">{order.order_number}</CardTitle>
                       <p className="text-sm text-muted-foreground mt-1">
@@ -233,7 +233,7 @@ const Admin = () => {
             {contacts.map((contact) => (
               <Card key={contact.id}>
                 <CardHeader>
-                  <div className="flex justify-between items-start">
+                  <div className="flex flex-col xs:flex-row justify-between items-start gap-2">
                     <div>
                       <CardTitle className="text-xl">{contact.name}</CardTitle>
                       <p className="text-sm text-muted-foreground mt-1">
@@ -280,7 +280,7 @@ const Admin = () => {
             {quotes.map((quote) => (
               <Card key={quote.id}>
                 <CardHeader>
-                  <div className="flex justify-between items-start">
+                  <div className="flex flex-col xs:flex-row justify-between items-start gap-2">
                     <div>
                       <CardTitle className="text-xl">{quote.name}</CardTitle>
                       <p className="text-sm text-muted-foreground mt-1">

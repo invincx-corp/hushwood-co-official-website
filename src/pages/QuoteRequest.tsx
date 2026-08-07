@@ -158,14 +158,14 @@ export const QuoteRequest = () => {
       <main className="pt-16">
         {/* Header */}
         <section className="gradient-elegant py-8">
-          <div className="max-w-4xl mx-auto px-6">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <Link to={`/product/${product.id}`} className="inline-flex items-center text-primary hover:text-accent mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Product
             </Link>
             
             <div className="text-center space-y-4">
-              <h1 className="text-3xl lg:text-4xl font-bold text-primary">Request Custom Quote</h1>
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary">Request Custom Quote</h1>
               <p className="text-lg text-muted-foreground">
                 Get a personalized quote for <span className="font-semibold text-primary">{product.title}</span>
               </p>
@@ -173,7 +173,7 @@ export const QuoteRequest = () => {
           </div>
         </section>
 
-        <div className="max-w-4xl mx-auto px-6 py-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Quote Form */}
             <div className="lg:col-span-2">

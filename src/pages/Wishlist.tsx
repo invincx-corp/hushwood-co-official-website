@@ -39,7 +39,7 @@ const Wishlist = () => {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       <main className="flex-1 container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8">My Wishlist</h1>
+        <h1 className="text-2xl sm:text-4xl font-bold mb-6 sm:mb-8">My Wishlist</h1>
         
         {wishlist.length === 0 ? (
           <Card>
@@ -49,7 +49,7 @@ const Wishlist = () => {
             </CardContent>
           </Card>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {wishlistWithProducts.map(item => (
               <Card key={item.id} className="overflow-hidden">
                 <div className="aspect-video relative">
