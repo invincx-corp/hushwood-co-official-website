@@ -128,15 +128,15 @@ export const SubcategoryPage = () => {
       <main className="pt-16">
         {/* Header */}
         <section className="gradient-elegant py-16">
-          <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="text-center space-y-6">
               <div className="flex items-center justify-center mb-4">
                 <div className="text-accent">
                   {config.icon}
                 </div>
               </div>
-              <h1 className="text-4xl lg:text-6xl font-bold text-primary">{config.title}</h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-primary">{config.title}</h1>
+              <p className="text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto">
                 {config.description}
               </p>
               <div className="flex flex-wrap justify-center gap-2 mt-6">
@@ -153,7 +153,7 @@ export const SubcategoryPage = () => {
           </div>
         </section>
 
-        <div className="max-w-7xl mx-auto px-6 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
           {/* Search */}
           <div className="mb-8">
             <div className="relative max-w-md mx-auto">

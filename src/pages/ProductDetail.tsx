@@ -75,8 +75,8 @@ export const ProductDetail = () => {
       <main className="pt-24">
         {/* Breadcrumb */}
         <div className="border-b">
-          <div className="max-w-7xl mx-auto px-6 py-4">
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+            <div className="flex items-center gap-2 text-sm text-muted-foreground overflow-x-auto whitespace-nowrap">
               <Link to="/" className="hover:text-primary">Home</Link>
               <span>/</span>
               <Link to={`/catalog/${product.category}`} className="hover:text-primary capitalize">
@@ -88,8 +88,8 @@ export const ProductDetail = () => {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 py-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Product Images */}
             <div className="space-y-4">
               <div className="aspect-square rounded-lg overflow-hidden bg-muted">
@@ -135,7 +135,7 @@ export const ProductDetail = () => {
                   )}
                 </div>
                 
-                <h1 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-4">
                   {product.title}
                 </h1>
                 
@@ -154,9 +154,9 @@ export const ProductDetail = () => {
 
               {/* Action Buttons */}
               <div className="space-y-3">
-                <div className="flex gap-3">
+                <div className="flex flex-wrap gap-3">
                   <Button 
-                    className="flex-1"
+                    className="flex-1 min-w-[140px]"
                     onClick={() => setShowCustomization(true)}
                   >
                     <ShoppingCart className="w-4 h-4 mr-2" />
@@ -214,7 +214,7 @@ export const ProductDetail = () => {
               <Card>
                 <CardContent className="p-4">
                   <h3 className="font-semibold text-primary mb-3">Key Features</h3>
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {product.features.map((feature, index) => (
                       <div key={index} className="flex items-center text-sm">
                         <div className="w-2 h-2 bg-accent rounded-full mr-2"></div>

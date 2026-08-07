@@ -38,14 +38,14 @@ export const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <>
     <Card className="group overflow-hidden shadow-elegant hover:shadow-gold transition-spring hover:-translate-y-2">
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative h-40 sm:h-48 overflow-hidden">
         <img 
           src={product.images[0]} 
           alt={product.title}
           className="w-full h-full object-cover transition-smooth group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-smooth"></div>
-        <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-smooth">
+        <div className="absolute top-2 right-2 sm:top-4 sm:right-4 flex gap-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-smooth">
           <Button 
             size="icon" 
             variant={inWishlist ? "default" : "outline"} 
@@ -63,14 +63,14 @@ export const ProductCard = ({ product }: ProductCardProps) => {
             <ShoppingCart className="w-4 h-4" />
           </Button>
         </div>
-        <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-smooth">
+        <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-smooth">
           <Badge variant="secondary" className="bg-accent text-primary">
             {product.customizable ? 'Customizable' : 'Standard'}
           </Badge>
         </div>
       </div>
       
-      <CardContent className="p-4 space-y-3">
+      <CardContent className="p-3 sm:p-4 space-y-3">
         <div className="flex flex-wrap gap-1">
           {product.occasion.slice(0, 2).map((occasion) => (
             <Badge key={occasion} variant="outline" className="text-xs">

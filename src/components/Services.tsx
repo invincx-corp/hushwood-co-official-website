@@ -43,16 +43,16 @@ const services = [
 
 export const Services = () => {
   return (
-    <section className="py-20 gradient-elegant">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-left mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-primary">Our Services</h2>
+    <section className="py-12 sm:py-20 gradient-elegant">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="text-left mb-8 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary">Our Services</h2>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {services.map((service, index) => (
             <Card key={index} className="group overflow-hidden shadow-elegant transition-spring hover:shadow-gold hover:-translate-y-2">
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-48 sm:h-64 overflow-hidden">
                 <img 
                   src={service.image} 
                   alt={service.title}
@@ -64,11 +64,11 @@ export const Services = () => {
                 </div>
               </div>
               
-              <CardContent className="p-6 space-y-4">
-                <h3 className="text-2xl font-semibold text-primary">{service.title}</h3>
+              <CardContent className="p-4 sm:p-6 space-y-3 sm:space-y-4">
+                <h3 className="text-xl sm:text-2xl font-semibold text-primary">{service.title}</h3>
                 <p className="text-muted-foreground">{service.description}</p>
                 
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-1 xs:grid-cols-2 gap-2">
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="text-sm text-muted-foreground flex items-center">
                       <div className="w-2 h-2 bg-accent rounded-full mr-2"></div>

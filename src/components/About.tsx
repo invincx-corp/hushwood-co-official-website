@@ -26,12 +26,12 @@ const values = [
 
 export const About = () => {
   return (
-    <section className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
+    <section className="py-12 sm:py-20 bg-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-center">
+          <div className="space-y-6 sm:space-y-8">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-primary">About Hushwood & Co</h2>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary">About Hushwood & Co</h2>
             </div>
             
             <div className="space-y-6">

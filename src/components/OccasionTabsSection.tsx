@@ -173,14 +173,14 @@ const getOccasionPath = (key: OccasionKey) => {
 
 export const OccasionTabsSection = () => {
   return (
-    <section className="py-20 bg-gradient-subtle">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-left mb-10">
-          <h2 className="text-3xl lg:text-4xl font-bold text-primary">Pick an Occasion</h2>
+    <section className="py-12 sm:py-20 bg-gradient-subtle">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="text-left mb-6 sm:mb-10">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary">Pick an Occasion</h2>
         </div>
 
         <Tabs defaultValue={occasionGroups[0].key} className="w-full">
-          <div className="sticky top-24 z-30 -mx-6 px-6 py-3 bg-gradient-subtle/95 backdrop-blur-sm border-y border-border">
+          <div className="sticky top-16 sm:top-24 z-30 -mx-4 sm:-mx-6 px-4 sm:px-6 py-3 bg-gradient-subtle/95 backdrop-blur-sm border-y border-border">
             <div className="max-w-7xl mx-auto">
               <div className="overflow-x-auto">
                 <TabsList className="w-max h-auto inline-flex gap-2 bg-transparent p-0">
@@ -188,9 +188,9 @@ export const OccasionTabsSection = () => {
                     <TabsTrigger
                       key={group.key}
                       value={group.key}
-                      className="bg-background border border-border shadow-sm rounded-full px-4 py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-gold"
+                      className="bg-background border border-border shadow-sm rounded-full px-3 sm:px-4 py-2 text-xs sm:text-sm whitespace-nowrap data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-gold"
                     >
-                      <group.icon className="w-4 h-4 mr-2" />
+                      <group.icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                       {group.label}
                     </TabsTrigger>
                   ))}
@@ -201,7 +201,7 @@ export const OccasionTabsSection = () => {
 
           {occasionGroups.map((group) => (
             <TabsContent key={group.key} value={group.key} className="mt-0">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
                 {group.occasions.map((key) => {
                   const occasion = occasionTabs.find((t) => t.key === key);
                   if (!occasion) return null;
@@ -209,7 +209,7 @@ export const OccasionTabsSection = () => {
                   return (
                     <Link key={occasion.key} to={getOccasionPath(occasion.key)} className="block">
                       <Card className="group overflow-hidden shadow-elegant transition-spring hover:shadow-gold hover:-translate-y-1">
-                        <div className="relative h-40 overflow-hidden">
+                        <div className="relative h-32 sm:h-40 overflow-hidden">
                           <img
                             src={occasion.themeImage}
                             alt={occasion.label}
@@ -219,10 +219,10 @@ export const OccasionTabsSection = () => {
                           <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/40 to-transparent" />
                         </div>
 
-                        <CardContent className="p-5">
+                        <CardContent className="p-4 sm:p-5">
                           <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 gradient-gold rounded-full flex items-center justify-center shadow-gold shrink-0">
-                              <occasion.icon className="w-5 h-5 text-primary-foreground" />
+                            <div className="w-9 h-9 sm:w-10 sm:h-10 gradient-gold rounded-full flex items-center justify-center shadow-gold shrink-0">
+                              <occasion.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary-foreground" />
                             </div>
                             <div className="min-w-0">
                               <h3 className="text-lg font-semibold text-primary leading-snug">

@@ -118,10 +118,10 @@ export const ProductCatalog = () => {
       <main className="pt-16">
         {/* Header */}
         <section className="gradient-elegant py-12">
-          <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="text-center space-y-4">
-              <h1 className="text-4xl lg:text-5xl font-bold text-primary">{categoryTitle}</h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-primary">{categoryTitle}</h1>
+              <p className="text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto">
                 {categoryDescription}
               </p>
               <div className="text-sm text-muted-foreground">
@@ -131,7 +131,7 @@ export const ProductCatalog = () => {
           </div>
         </section>
 
-        <div className="max-w-7xl mx-auto px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           {/* Search and Controls */}
           <div className="flex flex-col lg:flex-row gap-4 mb-8">
             <div className="flex-1 relative">
@@ -146,7 +146,7 @@ export const ProductCatalog = () => {
             
             <div className="flex gap-2">
               <Select value={sortBy} onValueChange={setSortBy}>
-                <SelectTrigger className="w-40">
+                <SelectTrigger className="w-32 sm:w-40">
                   <SelectValue placeholder="Sort by" />
                 </SelectTrigger>
                 <SelectContent>
@@ -184,10 +184,10 @@ export const ProductCatalog = () => {
             </div>
           </div>
 
-          <div className="flex gap-8">
+          <div className="flex flex-col lg:flex-row gap-8">
             {/* Filters Sidebar */}
             {showFilters && (
-              <div className="w-80 flex-shrink-0">
+              <div className="w-full lg:w-80 flex-shrink-0">
                 <FilterSidebar
                   selectedOccasions={selectedOccasions}
                   selectedVenues={selectedVenues}

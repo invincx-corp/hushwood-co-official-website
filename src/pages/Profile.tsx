@@ -154,18 +154,18 @@ const Profile = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
-      <main className="flex-1 container mx-auto px-4 py-16">
+      <main className="flex-1 container mx-auto px-4 py-10 sm:py-16">
         <div className="max-w-4xl mx-auto">
-          <div className="flex justify-between items-center mb-8">
-            <h1 className="text-4xl font-bold">My Account</h1>
-            <Button variant="outline" onClick={signOut}>Sign Out</Button>
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-8">
+            <h1 className="text-2xl sm:text-4xl font-bold">My Account</h1>
+            <Button variant="outline" onClick={signOut} className="w-full sm:w-auto">Sign Out</Button>
           </div>
 
           <Tabs defaultValue="orders" className="w-full">
-            <TabsList className="grid w-full grid-cols-3">
-              <TabsTrigger value="orders">Orders</TabsTrigger>
-              <TabsTrigger value="quotes">Quote Requests</TabsTrigger>
-              <TabsTrigger value="profile">Profile</TabsTrigger>
+            <TabsList className="grid w-full grid-cols-3 h-auto">
+              <TabsTrigger value="orders" className="text-xs sm:text-sm px-2 py-2">Orders</TabsTrigger>
+              <TabsTrigger value="quotes" className="text-xs sm:text-sm px-2 py-2">Quote Requests</TabsTrigger>
+              <TabsTrigger value="profile" className="text-xs sm:text-sm px-2 py-2">Profile</TabsTrigger>
             </TabsList>
 
             <TabsContent value="orders" className="space-y-4">
@@ -181,7 +181,7 @@ const Profile = () => {
                 orders.map(order => (
                   <Card key={order.id}>
                     <CardHeader>
-                      <div className="flex justify-between items-start">
+                      <div className="flex flex-col xs:flex-row justify-between items-start gap-2">
                         <div>
                           <CardTitle className="text-lg">{order.order_number}</CardTitle>
                           <p className="text-sm text-muted-foreground mt-1">

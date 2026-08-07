@@ -25,16 +25,16 @@ export const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-24">
-          <div className="flex items-center space-x-2">
-            <Link to="/" className="flex items-center gap-2">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6">
+        <div className="flex items-center justify-between h-14 sm:h-20 md:h-24">
+          <div className="flex items-center space-x-2 min-w-0">
+            <Link to="/" className="flex items-center gap-1.5 sm:gap-2 min-w-0">
               <img
                 src="/images/HushwoodLogoMain.png"
                 alt="Hushwood & Co"
-                className="h-24 w-24 object-contain"
+                className="h-10 w-10 sm:h-16 sm:w-16 md:h-24 md:w-24 object-contain shrink-0"
               />
-              <h1 className="text-3xl md:text-4xl font-playfair font-bold text-primary leading-none">
+              <h1 className="text-lg sm:text-2xl md:text-4xl font-playfair font-bold text-primary leading-none truncate">
                 Hushwood <span className="text-accent">& Co</span>
               </h1>
             </Link>
@@ -160,18 +160,46 @@ export const Navigation = () => {
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="md:hidden p-2 text-foreground hover:text-accent transition-smooth"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile Actions */}
+          <div className="flex items-center gap-1 md:hidden">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => navigate('/wishlist')}
+              className="relative h-9 w-9"
+            >
+              <Heart className="w-5 h-5" />
+              {wishlist.length > 0 && (
+                <Badge className="absolute -top-1 -right-1 h-4 w-4 flex items-center justify-center p-0 text-[10px]">
+                  {wishlist.length}
+                </Badge>
+              )}
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => navigate('/cart')}
+              className="relative h-9 w-9"
+            >
+              <ShoppingCart className="w-5 h-5" />
+              {cart.length > 0 && (
+                <Badge className="absolute -top-1 -right-1 h-4 w-4 flex items-center justify-center p-0 text-[10px]">
+                  {cart.length}
+                </Badge>
+              )}
+            </Button>
+            <button
+              onClick={toggleMenu}
+              className="p-2 text-foreground hover:text-accent transition-smooth"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden py-4 space-y-4 border-t border-border">
+          <div className="md:hidden py-4 space-y-4 border-t border-border max-h-[calc(100vh-3.5rem)] overflow-y-auto">
             <Link to="/" className="block text-foreground hover:text-accent transition-smooth" onClick={toggleMenu}>Home</Link>
             <Link to="/catalog/all" className="block text-foreground hover:text-accent transition-smooth" onClick={toggleMenu}>All Products</Link>
             <Link to="/catalog/stationery" className="block text-foreground hover:text-accent transition-smooth" onClick={toggleMenu}>Stationery & Design</Link>
@@ -180,6 +208,25 @@ export const Navigation = () => {
             <Link to="/catalog/corporate" className="block text-foreground hover:text-accent transition-smooth" onClick={toggleMenu}>Corporate Solutions</Link>
             <Link to="/about" className="block text-foreground hover:text-accent transition-smooth" onClick={toggleMenu}>About</Link>
             <Link to="/contact" className="block text-foreground hover:text-accent transition-smooth" onClick={toggleMenu}>Contact</Link>
+            <div className="pt-2 border-t border-border">
+              {user ? (
+                <div className="space-y-2 pt-2">
+                  <Link to="/profile" onClick={toggleMenu} className="flex items-center gap-2 text-foreground hover:text-accent transition-smooth">
+                    <User className="w-4 h-4" /> My Profile
+                  </Link>
+                  <button
+                    onClick={() => { signOut(); toggleMenu(); }}
+                    className="flex items-center gap-2 text-foreground hover:text-accent transition-smooth"
+                  >
+                    <LogOut className="w-4 h-4" /> Sign Out
+                  </button>
+                </div>
+              ) : (
+                <Button variant="hero" size="sm" className="w-full shadow-gold mt-2" onClick={() => { navigate('/auth'); toggleMenu(); }}>
+                  Sign In
+                </Button>
+              )}
+            </div>
             <Link to="/catalog/all">
               <Button variant="hero" size="sm" className="w-full shadow-gold">
                 Browse Catalog
