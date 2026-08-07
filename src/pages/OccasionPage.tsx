@@ -156,14 +156,14 @@ export const OccasionPage = () => {
       
       <main className="pt-16">
         {/* Hero Section */}
-        <section className={`gradient-elegant py-20 ${config.bgColor}`}>
-          <div className="max-w-7xl mx-auto px-6">
+        <section className={`gradient-elegant py-12 sm:py-20 ${config.bgColor}`}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="text-center space-y-6">
               <div className={`flex items-center justify-center mb-4 ${config.color}`}>
                 {config.icon}
               </div>
-              <h1 className="text-4xl lg:text-6xl font-bold text-primary">{config.title}</h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-primary">{config.title}</h1>
+              <p className="text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto">
                 {config.description}
               </p>
               <div className="flex flex-wrap justify-center gap-3 mt-8">
@@ -180,7 +180,7 @@ export const OccasionPage = () => {
           </div>
         </section>
 
-        <div className="max-w-7xl mx-auto px-6 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
           {/* Search and Controls */}
           <div className="flex flex-col lg:flex-row gap-4 mb-8">
             <div className="flex-1 relative">
@@ -201,10 +201,10 @@ export const OccasionPage = () => {
             </Button>
           </div>
 
-          <div className="flex gap-8">
+          <div className="flex flex-col lg:flex-row gap-8">
             {/* Filters Sidebar */}
             {showFilters && (
-              <div className="w-80 flex-shrink-0">
+              <div className="w-full lg:w-80 flex-shrink-0">
                 <Card>
                   <CardContent className="p-6">
                     <h3 className="font-semibold text-primary mb-4">Categories</h3>
@@ -315,14 +315,14 @@ export const OccasionPage = () => {
                         Our expert team can help you create the perfect celebration with 
                         personalized recommendations and end-to-end planning support.
                       </p>
-                      <div className="flex gap-4 justify-center">
+                      <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link to="/#contact">
-                          <Button size="lg" className="shadow-gold">
+                          <Button size="lg" className="shadow-gold w-full sm:w-auto">
                             Get Consultation
                           </Button>
                         </Link>
                         <Link to="/catalog/all">
-                          <Button variant="outline" size="lg">
+                          <Button variant="outline" size="lg" className="w-full sm:w-auto">
                             View Portfolio
                           </Button>
                         </Link>

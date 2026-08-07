@@ -148,15 +148,15 @@ export const VenuePage = () => {
       
       <main className="pt-16">
         {/* Hero Section */}
-        <section className={`gradient-elegant py-20 ${config.bgColor}`}>
-          <div className="max-w-7xl mx-auto px-6">
+        <section className={`gradient-elegant py-12 sm:py-20 ${config.bgColor}`}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="text-center space-y-6">
               <div className={`flex items-center justify-center mb-4 ${config.color}`}>
                 <MapPin className="w-6 h-6 mr-2" />
                 {config.icon}
               </div>
-              <h1 className="text-4xl lg:text-6xl font-bold text-primary">{config.title}</h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-primary">{config.title}</h1>
+              <p className="text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto">
                 {config.description}
               </p>
               
@@ -178,7 +178,7 @@ export const VenuePage = () => {
           </div>
         </section>
 
-        <div className="max-w-7xl mx-auto px-6 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
           {/* Search */}
           <div className="mb-8">
             <div className="relative max-w-md mx-auto">
@@ -253,14 +253,14 @@ export const VenuePage = () => {
                           Our team specializes in {config.title.toLowerCase()} and can create 
                           custom solutions that perfectly complement your venue's unique characteristics.
                         </p>
-                        <div className="flex gap-4 justify-center">
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
                           <Link to="/#contact">
-                            <Button size="lg" className="shadow-gold">
+                            <Button size="lg" className="shadow-gold w-full sm:w-auto">
                               Schedule Site Visit
                             </Button>
                           </Link>
                           <Link to="/catalog/all">
-                            <Button variant="outline" size="lg">
+                            <Button variant="outline" size="lg" className="w-full sm:w-auto">
                               View Gallery
                             </Button>
                           </Link>
