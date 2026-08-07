@@ -3,8 +3,8 @@ import { Phone, Mail, MapPin, Instagram, Facebook, Twitter } from "lucide-react"
 export const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
             <h3 className="text-2xl font-playfair font-bold">
               Hushwood <span className="text-accent">& Co</span>

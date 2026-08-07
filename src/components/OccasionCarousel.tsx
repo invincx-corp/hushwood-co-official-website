@@ -73,10 +73,10 @@ const banners: OccasionBanner[] = [
 
 export const OccasionCarousel = () => {
   return (
-    <section className="py-12 lg:py-16 bg-background">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-10">
-          <h2 className="text-3xl lg:text-4xl font-bold text-primary">Celebrations, Curated Beautifully</h2>
+    <section className="py-10 sm:py-12 lg:py-16 bg-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="mb-6 sm:mb-10">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary">Celebrations, Curated Beautifully</h2>
         </div>
         <Carousel
           opts={{
@@ -85,15 +85,15 @@ export const OccasionCarousel = () => {
           }}
           className="relative"
         >
-          <CarouselContent className="-ml-6">
+          <CarouselContent className="-ml-3 sm:-ml-6">
             {banners.map((banner) => (
               <CarouselItem
                 key={banner.title}
-                className="pl-6 basis-[90%] sm:basis-[70%] lg:basis-[45%]"
+                className="pl-3 sm:pl-6 basis-[92%] sm:basis-[70%] lg:basis-[45%]"
               >
                 <Card className="overflow-hidden shadow-elegant border border-border">
                   <CardContent className="p-0">
-                    <div className="relative h-[280px] sm:h-[320px]">
+                    <div className="relative h-[220px] xs:h-[240px] sm:h-[320px]">
                       <img
                         src={banner.image}
                         alt={banner.title}
@@ -101,14 +101,14 @@ export const OccasionCarousel = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/55 to-transparent" />
 
-                      <div className="relative z-10 h-full p-8 flex flex-col justify-between">
+                      <div className="relative z-10 h-full p-4 sm:p-8 flex flex-col justify-between">
                         <div className="space-y-4">
-                          <div className="w-12 h-12 gradient-gold rounded-full flex items-center justify-center shadow-gold">
-                            <banner.icon className="w-6 h-6 text-primary-foreground" />
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 gradient-gold rounded-full flex items-center justify-center shadow-gold">
+                            <banner.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground" />
                           </div>
 
                           <div className="space-y-3">
-                            <h3 className="text-2xl sm:text-3xl font-bold text-primary-foreground leading-tight">
+                            <h3 className="text-lg sm:text-2xl md:text-3xl font-bold text-primary-foreground leading-tight">
                               {banner.title}
                             </h3>
                           </div>
@@ -116,7 +116,7 @@ export const OccasionCarousel = () => {
 
                         <div className="pt-4">
                           <Link to={banner.to}>
-                            <Button variant="hero" size="lg" className="shadow-gold transition-spring">
+                            <Button variant="hero" size="sm" className="shadow-gold transition-spring sm:text-base sm:h-11 sm:px-8">
                               {banner.cta}
                             </Button>
                           </Link>

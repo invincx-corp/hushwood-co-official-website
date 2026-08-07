@@ -73,13 +73,13 @@ export const Contact = () => {
   };
 
   return (
-    <section className="py-20 gradient-elegant">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-left mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-primary">Let's Create Together</h2>
+    <section className="py-12 sm:py-20 gradient-elegant">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="text-left mb-10 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary">Let's Create Together</h2>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
           <div className="lg:col-span-2">
             <Card className="shadow-elegant">
               <CardHeader>

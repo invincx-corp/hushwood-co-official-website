@@ -151,11 +151,11 @@ const ReelCard = ({ reel }: { reel: Reel }) => {
 
 export const ReelsCarousel = () => {
   return (
-    <section className="py-12 lg:py-16 bg-background">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-end justify-between gap-6 mb-10">
+    <section className="py-10 sm:py-12 lg:py-16 bg-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex items-end justify-between gap-6 mb-6 sm:mb-10">
           <div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary">Moments that Count</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary">Moments that Count</h2>
           </div>
         </div>
 
@@ -166,9 +166,9 @@ export const ReelsCarousel = () => {
           }}
           className="relative"
         >
-          <CarouselContent className="-ml-6">
+          <CarouselContent className="-ml-3 sm:-ml-6">
             {reels.map((reel) => (
-              <CarouselItem key={reel.id} className="pl-6 basis-[75%] sm:basis-[45%] lg:basis-[26%]">
+              <CarouselItem key={reel.id} className="pl-3 sm:pl-6 basis-[80%] sm:basis-[45%] lg:basis-[26%]">
                 <ReelCard reel={reel} />
               </CarouselItem>
             ))}

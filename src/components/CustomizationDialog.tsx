@@ -86,15 +86,15 @@ export const CustomizationDialog = ({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-lg">
+      <DialogContent className="max-w-lg w-[calc(100%-2rem)] max-h-[90vh] overflow-y-auto p-4 sm:p-6">
         <DialogHeader>
-          <DialogTitle className="text-2xl">Customize Your Order</DialogTitle>
+          <DialogTitle className="text-xl sm:text-2xl">Customize Your Order</DialogTitle>
           <DialogDescription className="text-base">
             {productTitle}
           </DialogDescription>
         </DialogHeader>
 
-        <div className="space-y-6 py-4">
+        <div className="space-y-5 sm:space-y-6 py-3 sm:py-4">
           {/* Quantity */}
           <div className="space-y-2">
             <Label htmlFor="quantity">Quantity</Label>
@@ -112,13 +112,13 @@ export const CustomizationDialog = ({
           <div className="space-y-3">
             <Label className="text-base font-semibold">Customization Options</Label>
             <p className="text-sm text-muted-foreground">Select all that apply to your order</p>
-            <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2">
+            <div className="space-y-3 max-h-[300px] sm:max-h-[400px] overflow-y-auto pr-1 sm:pr-2">
               {commonCustomizations.map((option) => (
                 <div
                   key={option.title}
                   onClick={() => toggleOption(option.title)}
                   className={`
-                    relative flex items-start gap-3 p-4 rounded-lg border-2 cursor-pointer transition-all
+                    relative flex items-start gap-3 p-3 sm:p-4 rounded-lg border-2 cursor-pointer transition-all
                     ${selectedOptions.includes(option.title) 
                       ? 'border-primary bg-primary/5' 
                       : 'border-border bg-card hover:border-primary/50 hover:bg-accent/50'
@@ -164,11 +164,11 @@ export const CustomizationDialog = ({
           </div>
         </div>
 
-        <DialogFooter>
-          <Button variant="outline" onClick={() => onOpenChange(false)}>
+        <DialogFooter className="flex-col sm:flex-row gap-2">
+          <Button variant="outline" onClick={() => onOpenChange(false)} className="w-full sm:w-auto">
             Cancel
           </Button>
-          <Button onClick={handleConfirm} className="shadow-gold">
+          <Button onClick={handleConfirm} className="shadow-gold w-full sm:w-auto">
             Add to Cart
           </Button>
         </DialogFooter>

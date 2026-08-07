@@ -140,7 +140,7 @@ export const FilterSidebar = ({
   const totalFilters = selectedOccasions.length + selectedVenues.length + selectedRequirements.length + (customizableOnly ? 1 : 0);
 
   return (
-    <Card className="sticky top-20">
+    <Card className="sticky top-16 sm:top-20">
       <CardHeader>
         <div className="flex items-center justify-between">
           <CardTitle className="text-lg">Filters</CardTitle>
