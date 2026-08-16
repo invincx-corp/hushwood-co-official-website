@@ -260,14 +260,15 @@ export const OccasionPage = () => {
                 </div>
               ) : (
                 <Tabs defaultValue="graphic-designs" className="w-full">
-                  <div className="mb-6 overflow-x-auto">
+                  <HorizontalScroller className="mb-6" ariaLabel="Product categories">
                     <TabsList className="w-max">
                       <TabsTrigger value="graphic-designs">Graphic Designs</TabsTrigger>
                       <TabsTrigger value="decorations">Decorations</TabsTrigger>
                       <TabsTrigger value="gift-hampers">Gift Hampers</TabsTrigger>
                       <TabsTrigger value="other-accessories">Other Accessories</TabsTrigger>
                     </TabsList>
-                  </div>
+                  </HorizontalScroller>
+
 
                   <TabsContent value="graphic-designs" className="mt-0">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
