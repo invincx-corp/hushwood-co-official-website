@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { HorizontalScroller } from "@/components/HorizontalScroller";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Baby,
@@ -182,7 +183,7 @@ export const OccasionTabsSection = () => {
         <Tabs defaultValue={occasionGroups[0].key} className="w-full">
           <div className="sticky top-16 sm:top-24 z-30 -mx-4 sm:-mx-6 px-4 sm:px-6 py-3 bg-gradient-subtle/95 backdrop-blur-sm border-y border-border">
             <div className="max-w-7xl mx-auto">
-              <div className="overflow-x-auto">
+              <HorizontalScroller ariaLabel="Occasion categories">
                 <TabsList className="w-max h-auto inline-flex gap-2 bg-transparent p-0">
                   {occasionGroups.map((group) => (
                     <TabsTrigger
@@ -195,7 +196,8 @@ export const OccasionTabsSection = () => {
                     </TabsTrigger>
                   ))}
                 </TabsList>
-              </div>
+              </HorizontalScroller>
+
             </div>
           </div>
 
