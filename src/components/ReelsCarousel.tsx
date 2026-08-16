@@ -174,8 +174,8 @@ export const ReelsCarousel = () => {
             ))}
           </CarouselContent>
 
-          <CarouselPrevious className="hidden lg:flex" />
-          <CarouselNext className="hidden lg:flex" />
+          <CarouselPrevious />
+          <CarouselNext />
         </Carousel>
       </div>
     </section>
