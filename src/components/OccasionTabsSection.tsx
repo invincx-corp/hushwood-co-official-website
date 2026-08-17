@@ -181,7 +181,7 @@ export const OccasionTabsSection = () => {
         </div>
 
         <Tabs defaultValue={occasionGroups[0].key} className="w-full">
-          <div className="sticky top-16 sm:top-24 z-30 -mx-4 sm:-mx-6 px-4 sm:px-6 py-3 bg-gradient-subtle/95 backdrop-blur-sm border-y border-border">
+          <div className="relative z-10 -mx-4 sm:-mx-6 px-4 sm:px-6 py-3 border-y border-border">
             <div className="max-w-7xl mx-auto">
               <HorizontalScroller ariaLabel="Occasion categories">
                 <TabsList className="w-max h-auto inline-flex gap-2 bg-transparent p-0">
