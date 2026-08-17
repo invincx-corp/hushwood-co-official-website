@@ -4,6 +4,12 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { cn } from "@/lib/utils";
 import { Play } from "lucide-react";
 import { useRef, useState } from "react";
+import birthdayReel from "../../public/reels/birthday.mp4.asset.json";
+import weddingReel from "../../public/reels/wedding.mp4.asset.json";
+import corporateReel from "../../public/reels/corporate.mp4.asset.json";
+import stationeryReel from "../../public/reels/stationery.mp4.asset.json";
+import decorationReel from "../../public/reels/decoration.mp4.asset.json";
+import festivalsReel from "../../public/reels/festivals.mp4.asset.json";
 
 type Reel = {
   id: string;
@@ -19,42 +25,42 @@ const reels: Reel[] = [
     title: "Birthday vibes",
     tag: "Birthday",
     source: "Hushwood",
-    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+    src: birthdayReel.url,
   },
   {
     id: "2",
     title: "Wedding details",
     tag: "Wedding",
     source: "Customer",
-    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    src: weddingReel.url,
   },
   {
     id: "3",
     title: "Corporate gifting",
     tag: "Corporate",
     source: "Hushwood",
-    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    src: corporateReel.url,
   },
   {
     id: "4",
     title: "Stationery closeups",
     tag: "Stationery",
     source: "Customer",
-    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+    src: stationeryReel.url,
   },
   {
     id: "5",
     title: "Event decor",
     tag: "Decoration",
     source: "Hushwood",
-    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    src: decorationReel.url,
   },
   {
     id: "6",
     title: "Festival gifting",
     tag: "Festivals",
     source: "Customer",
-    src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
+    src: festivalsReel.url,
   },
 ];
 
