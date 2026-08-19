@@ -4,12 +4,12 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { CalendarHeart, Gift, PartyPopper, Leaf, BriefcaseBusiness, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import birthdayImage from "@/assets/bollywood-party.jpg";
-import anniversaryImage from "@/assets/palace-wedding-decor.jpg";
-import giftsImage from "@/assets/corporate-gifts.jpg";
-import corporateImage from "@/assets/employee-recognition.jpg";
-import natureImage from "@/assets/babyshower-garden.jpg";
-import stationeryImage from "@/assets/stationery-design.jpg";
+import birthdayImage from "@/assets/sections/occasion-birthday.jpg";
+import anniversaryImage from "@/assets/sections/occasion-anniversary.jpg";
+import giftsImage from "@/assets/sections/occasion-gifts.jpg";
+import corporateImage from "@/assets/sections/occasion-corporate.jpg";
+import natureImage from "@/assets/sections/occasion-nature.jpg";
+import stationeryImage from "@/assets/sections/occasion-stationery.jpg";
 
 type OccasionBanner = {
   title: string;

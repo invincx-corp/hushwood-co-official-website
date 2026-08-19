@@ -2,9 +2,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PenTool, Gift, Sparkles, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
-import stationeryImage from "@/assets/stationery-design.jpg";
-import venueImage from "@/assets/venue-decoration.jpg";
-import corporateImage from "@/assets/corporate-gifts.jpg";
+import stationeryImage from "@/assets/sections/service-stationery.jpg";
+import giftsImage from "@/assets/sections/service-gifts.jpg";
+import venueImage from "@/assets/sections/service-decoration.jpg";
+import corporateImage from "@/assets/sections/service-corporate.jpg";
 
 const services = [
   {
@@ -19,7 +20,7 @@ const services = [
     icon: Gift,
     title: "Personalized Gift Hampers",
     description: "Fully customizable gift hampers with professional packaging for every occasion",
-    image: corporateImage,
+    image: giftsImage,
     features: ["Bulk Gift Sourcing", "Custom Packaging", "Event Gifting", "Professional Wrapping"],
     category: "gifts"
   },
