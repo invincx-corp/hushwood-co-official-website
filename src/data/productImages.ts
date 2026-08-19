@@ -84,7 +84,7 @@ import employeeRecognitionC from '@/assets/gallery/employeeRecognition-c.jpg';
 import employeeRecognitionD from '@/assets/gallery/employeeRecognition-d.jpg';
 
 // Unique hero shots per product
-const productHeroes = import.meta.glob('@/assets/products/*.jpg', {
+const productHeroes = import.meta.glob('../assets/products/*.jpg', {
   eager: true,
   import: 'default',
 }) as Record<string, string>;
