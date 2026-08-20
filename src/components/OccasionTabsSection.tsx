@@ -22,24 +22,26 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import birthdayImage from "@/assets/bollywood-party.jpg";
-import weddingImage from "@/assets/palace-wedding-decor.jpg";
-import festivalImage from "@/assets/festival-cards.jpg";
-import inaugurationImage from "@/assets/government-event.jpg";
-import awardsImage from "@/assets/executive-awards.jpg";
-import launchImage from "@/assets/product-launch.jpg";
+import birthdayImage from "@/assets/occasions/birthday.jpg";
+import anniversaryImage from "@/assets/occasions/anniversary.jpg";
+import corporateImage from "@/assets/occasions/corporate.jpg";
+import weddingImage from "@/assets/occasions/wedding.jpg";
+import engagementImage from "@/assets/occasions/engagement.jpg";
+import babyShowerImage from "@/assets/occasions/baby-shower.jpg";
+import bridalShowerImage from "@/assets/occasions/bridal-shower.jpg";
+import bacheloretteImage from "@/assets/occasions/bachelorette.jpg";
+import festivalsImage from "@/assets/occasions/festivals.jpg";
+import inaugurationsImage from "@/assets/occasions/inaugurations.jpg";
+import housewarmingImage from "@/assets/occasions/housewarming.jpg";
+import awardsImage from "@/assets/occasions/awards.jpg";
+import publicEventsImage from "@/assets/occasions/public-events.jpg";
+import govtEventsImage from "@/assets/occasions/govt-events.jpg";
+import publicLaunchImage from "@/assets/occasions/public-launch.jpg";
+import specialDaysImage from "@/assets/occasions/special-days.jpg";
+import retirementImage from "@/assets/occasions/retirement.jpg";
+import privatePartyImage from "@/assets/occasions/private-party.jpg";
+import otherImage from "@/assets/occasions/other.jpg";
 
-import weddingInvitationsImage from "@/assets/wedding-invitations.jpg";
-import corporateStationeryImage from "@/assets/corporate-stationery.jpg";
-import diwaliDecorationImage from "@/assets/diwali-decoration.jpg";
-import employeeRecognitionImage from "@/assets/employee-recognition.jpg";
-import tradeShowImage from "@/assets/trade-show.jpg";
-import weddingHampersImage from "@/assets/wedding-hampers.jpg";
-import babyCardsImage from "@/assets/baby-cards.jpg";
-import corporateGiftingProgramImage from "@/assets/corporate-gifting-program.jpg";
-import diwaliHampersImage from "@/assets/diwali-hampers.jpg";
-import corporateCeremonyImage from "@/assets/corporate-ceremony.jpg";
-import venueDecorationImage from "@/assets/venue-decoration.jpg";
 
 type OccasionKey =
   | "birthday"
@@ -71,24 +73,25 @@ type OccasionTab = {
 
 const occasionTabs: OccasionTab[] = [
   { key: "birthday", label: "Birthday", icon: Cake, themeImage: birthdayImage },
-  { key: "anniversary", label: "Anniversary", icon: CalendarHeart, themeImage: weddingHampersImage },
-  { key: "corporate", label: "Corporate Events", icon: Building2, themeImage: corporateStationeryImage },
-  { key: "wedding", label: "Wedding", icon: HeartHandshake, themeImage: weddingInvitationsImage },
-  { key: "engagement", label: "Engagement", icon: Sparkles, themeImage: weddingImage },
-  { key: "baby_shower", label: "Baby Shower", icon: Baby, themeImage: babyCardsImage },
-  { key: "bridal_shower", label: "Bridal Shower", icon: Stars, themeImage: weddingInvitationsImage },
-  { key: "bachelorette", label: "Bachelorette", icon: PartyPopper, themeImage: birthdayImage },
-  { key: "festivals", label: "Festivals", icon: Sun, themeImage: diwaliDecorationImage },
-  { key: "inaugurations", label: "Inaugurations", icon: Landmark, themeImage: corporateCeremonyImage },
-  { key: "housewarming", label: "Housewarming", icon: Church, themeImage: venueDecorationImage },
+  { key: "anniversary", label: "Anniversary", icon: CalendarHeart, themeImage: anniversaryImage },
+  { key: "corporate", label: "Corporate Events", icon: Building2, themeImage: corporateImage },
+  { key: "wedding", label: "Wedding", icon: HeartHandshake, themeImage: weddingImage },
+  { key: "engagement", label: "Engagement", icon: Sparkles, themeImage: engagementImage },
+  { key: "baby_shower", label: "Baby Shower", icon: Baby, themeImage: babyShowerImage },
+  { key: "bridal_shower", label: "Bridal Shower", icon: Stars, themeImage: bridalShowerImage },
+  { key: "bachelorette", label: "Bachelorette", icon: PartyPopper, themeImage: bacheloretteImage },
+  { key: "festivals", label: "Festivals", icon: Sun, themeImage: festivalsImage },
+  { key: "inaugurations", label: "Inaugurations", icon: Landmark, themeImage: inaugurationsImage },
+  { key: "housewarming", label: "Housewarming", icon: Church, themeImage: housewarmingImage },
   { key: "awards", label: "Awards", icon: BadgeCheck, themeImage: awardsImage },
-  { key: "public_events", label: "Public Events", icon: Users, themeImage: tradeShowImage },
-  { key: "govt_events", label: "Govt Events", icon: Landmark, themeImage: inaugurationImage },
-  { key: "public_launch", label: "Public Launch", icon: Sparkles, themeImage: launchImage },
-  { key: "special_days", label: "Special Days", icon: Gift, themeImage: diwaliHampersImage },
-  { key: "retirement", label: "Retirement/Farewell", icon: GraduationCap, themeImage: employeeRecognitionImage },
-  { key: "private_party", label: "Office/Private Party", icon: CandlestickChart, themeImage: corporateGiftingProgramImage },
-  { key: "other", label: "Other", icon: Stars, themeImage: festivalImage },
+  { key: "public_events", label: "Public Events", icon: Users, themeImage: publicEventsImage },
+  { key: "govt_events", label: "Govt Events", icon: Landmark, themeImage: govtEventsImage },
+  { key: "public_launch", label: "Public Launch", icon: Sparkles, themeImage: publicLaunchImage },
+  { key: "special_days", label: "Special Days", icon: Gift, themeImage: specialDaysImage },
+  { key: "retirement", label: "Retirement/Farewell", icon: GraduationCap, themeImage: retirementImage },
+  { key: "private_party", label: "Office/Private Party", icon: CandlestickChart, themeImage: privatePartyImage },
+  { key: "other", label: "Other", icon: Stars, themeImage: otherImage },
+
 ];
 
 type OccasionGroupKey =
