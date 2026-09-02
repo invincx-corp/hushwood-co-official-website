@@ -1,9 +1,11 @@
 {
   "version": 1,
-  "asset_id": "9c03109a-9415-45c9-b435-ac15f02e1783",
+  "asset_id": "b7f564c8-302b-4c0e-9b28-59b8476165ac",
   "project_id": "43e06928-ef96-49d1-9f85-8cc5bb59be83",
-  "url": "/__l5e/assets-v1/9c03109a-9415-45c9-b435-ac15f02e1783/wedding.mp4",
+  "url": "/__l5e/assets-v1/b7f564c8-302b-4c0e-9b28-59b8476165ac/wedding.mp4",
+  "r2_key": "a/v1/43e06928-ef96-49d1-9f85-8cc5bb59be83/b7f564c8-302b-4c0e-9b28-59b8476165ac/wedding.mp4",
   "original_filename": "wedding.mp4",
-  "size": 4715097,
-  "created_at": "2026-08-17T06:54:38Z"
+  "size": 12399673,
+  "content_type": "video/mp4",
+  "created_at": "2026-09-02T16:37:14Z"
 }
