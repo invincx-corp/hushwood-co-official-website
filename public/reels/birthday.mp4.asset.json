@@ -1,9 +1,11 @@
 {
   "version": 1,
-  "asset_id": "030007c8-8a0f-4a55-bfcf-0db07eaf515b",
+  "asset_id": "fcfd0086-aa2c-4b28-9457-6cce11d0005a",
   "project_id": "43e06928-ef96-49d1-9f85-8cc5bb59be83",
-  "url": "/__l5e/assets-v1/030007c8-8a0f-4a55-bfcf-0db07eaf515b/birthday.mp4",
+  "url": "/__l5e/assets-v1/fcfd0086-aa2c-4b28-9457-6cce11d0005a/birthday.mp4",
+  "r2_key": "a/v1/43e06928-ef96-49d1-9f85-8cc5bb59be83/fcfd0086-aa2c-4b28-9457-6cce11d0005a/birthday.mp4",
   "original_filename": "birthday.mp4",
-  "size": 4273415,
-  "created_at": "2026-08-17T06:54:16Z"
+  "size": 9394266,
+  "content_type": "video/mp4",
+  "created_at": "2026-09-02T16:37:11Z"
 }
