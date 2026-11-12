@@ -1,0 +1,4 @@
+- [ ] Make reel playback open centered with sound and verify play, skip, scrub, close, and background blocking.
+- [ ] Tailor every product quote form to its product category and save the selections with the quote.
+- [ ] Remove redundant in-site back controls and make browser back/forward navigation preserve expected page position.
+- [ ] Audit live form submission/storage/email behavior and report any unverified or missing delivery.
